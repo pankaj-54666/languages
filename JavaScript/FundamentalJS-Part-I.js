@@ -40,10 +40,40 @@ function dataTypes()
 
 }
 
+function stringData()
+{
+    let s1 = "Pankaj \n Kumar \n Hello" // 
+    let s2 = "Pankaj \n\ Kumar \n\ Hello" //Before ES6
+    let s3 = `Pankaj
+     Kumar
+    Hello`;
+
+    //S3 is an example of Template String
+
+    console.log("s1 = ",s1)
+    //console.log(s1,s2,s3)
+
+    console.log("s2 = ",s2)
+
+    console.log("s3 = ",s3)
+
+    let userData  = {
+        name:"Pankaj",
+        age:27,
+        isLoggedIn:true,
+    }
+
+    const userStr = `name = ${userData.name}, age = ${userData.age}` //using string template!
+    console.log("userData object is\n",userStr) 
+
+}
+
 function main()
 {
     //variableNamingConvention();
-    dataTypes();
+    //dataTypes();
+
+    stringData()
 }
 
 main()
