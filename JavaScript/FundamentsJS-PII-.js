@@ -90,12 +90,33 @@ function objectTest()
     console.log("userName = ", userData.getName(), "userAge = ",userData.getAge())
 }
 
+function loopTest()
+{
+    const hobbies = ["Chess","VitaminD",89,900,true,false];
+
+    for(let i=0;i<hobbies.length;i++) /*NOTICE: in c++ it be hobbies.lenght() */
+    {
+        console.log( `i = ${i}, hobbies[i] = ${hobbies[i]}`)
+    }
+
+    console.log("\nPrinting via while loop")
+    let i=0;
+    while(i<hobbies.length)
+    {
+        console.log( `i = ${i}, hobbies[i] = ${hobbies[i]}`)
+        i++;
+    }
+
+}
+
 function main()
 {
     //functionTest();
     //arrayTest();
 
-    objectTest()
+   // objectTest()
+
+   loopTest();
    
 }
 
