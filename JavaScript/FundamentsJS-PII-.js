@@ -61,19 +61,41 @@ function arrayTest()
 
     //Adding element to array
     peoples[0] = "Tina" //updating value 
-    peoples.push("890") //inserting elements
-    console.log(peoples)
+    const arrayLenght = peoples.push("890") //inserting elements
+    console.log("\n\t" + peoples,arrayLenght)
 
     //Methodes on array elements
 
 
 }
 
+function objectTest()
+{
+    const userData = {
+        name:"Pankaj",
+        age:26,
+        hobbies : ["Chess","VitaminD",89],
+
+        getName : function(){ /* a function as a object attribute!! */
+            return this.name;
+        },
+
+        getAge : function(){
+            return this.age;
+        }
+    }//object clousure
+    
+
+
+    console.log("userName = ", userData.getName(), "userAge = ",userData.getAge())
+}
 
 function main()
 {
     //functionTest();
-    arrayTest();
+    //arrayTest();
+
+    objectTest()
    
 }
 
