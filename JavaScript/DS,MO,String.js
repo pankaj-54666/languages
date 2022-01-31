@@ -56,10 +56,19 @@ function spreadOperator()
     console.log(letters)
 }
 
+function restOperator()
+{
+    console.log("Rest Operator");
+    const [a,b, ...others] = [1,2,3,4,5,[6,7]]; //when used on left side,it becomes rest
+
+    console.log(a,b,"\n",others)
+}
+
 function main()
 {
     //objectDestructure()
-    spreadOperator();
+    //spreadOperator();
+    restOperator();
 }
 
 main()
