@@ -80,9 +80,10 @@ function objectTest()
             return this.name;
         },
 
-        getAge : function(){
+        getAge : () => {
             return this.age;
-        }
+        },
+        getHobbies : () => hobbies
     }//object clousure
     
 
