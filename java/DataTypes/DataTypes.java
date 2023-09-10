@@ -149,9 +149,65 @@ class DataTypes{
         
     }
 
-
+    /**
+     *  Map Functions:      https://docs.oracle.com/javase/8/docs/api/java/util/Map.html#method.summary
+     *  HashSet Functions:   https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html#method.summary*/
     void testMap()
     {
+        // Map<Integer,String> mMap = new Map<>(); //it will not work, as Map is a interface.
+
+        Map<Integer,String> mMap = new HashMap<>();
+        //we can replace Hashmap with any implementation of Map interface like: HashMap,HashTabel,LinkedHashmap,TreeMap,etc (https://quickref.me/java.html)
+
+        mMap.put(1,"One");
+        mMap.put(2,"Two");
+        mMap.put(-1,"NergativeOne");
+
+        //way1 print
+        System.out.println("\n\t::Print Using Map.Entry:mMap");
+        for(Map.Entry<Integer,String> entry: mMap.entrySet()){
+            Integer key = entry.getKey();
+            String value = entry.getValue();
+
+            System.out.printf("%d:%s\n",key,value);
+        }
+
+        //way2 (Preferred)
+        System.out.println("\n\t::Print using mMap.forEach");
+        mMap.forEach((key,value)-> System.out.printf("%d:%s\n",key,value));
+
+        //way3
+        System.out.printf("\n\t::Print using .entrySet().stream().forEach\n");
+        mMap.entrySet().stream()
+            .forEach(entry -> System.out.printf("%d:%s\n",entry.getKey(),entry.getValue()));
+
+        //way4
+        System.out.printf("\n\t::Using Iterator\n");
+        Iterator<Map.Entry<Integer, String>> iterator = mMap.entrySet().iterator();
+        while(iterator.hasNext())
+        {
+            Map.Entry<Integer, String> entry = iterator.next();
+             System.out.printf("%d:%s\n",entry.getKey(),entry.getValue());
+        }
+
+        //Check key existance
+        System.out.printf("\n\t:: check key existance: " + mMap.containsKey(1));
+
+        //Map with custom comperator
+
+        class MyListNode{
+            int x,y;
+        };
+
+        class CustomComparator implements Comparator<MyListNode> {
+            @Override
+            public int compare(MyListNode node1, MyListNode node2) {
+                return Integer.compare(node1.x, node2.x);
+            }
+        }
+
+        Map<MyListNode,String> mMap2 = new TreeMap<>(new CustomComparator()); //Hashmap is unordered, so if you want ordering you need to use TreeMap.
+        mMap2.put(new MyListNode(),"One");
 
     }
 
