@@ -10,9 +10,17 @@ class DataTypes{
         }
         System.out.println("");
     }
-
+        
+    /**
+    Goal:
+        (a) Java Primitive: int,String
+        (b) int vs Integer
+        (c) int [] vs Integer[]
+        (d) Functions avaiable on int vs Integer
+    */
     void primitiveTypes()
     {
+
         System.out.printf("Testing Primitinve Data Types\n");
 
         int a=90,b=34_56;
@@ -23,9 +31,17 @@ class DataTypes{
     }
 
 
-
+    /**
+    Goal:
+    (a) Sort a primitive array
+    (b) Sort it in revese order
+    (c) Sort Generic Array
+    (d) Sort using comperator
+    (e) Comperator using lambda expression, function expression and classs comperator.
+    */
     void arraySorting()
     {
+
         //# Sort primitive array Array: normal + reverse
 
         int arr[] = {5,3,4,1,6,8,34,4,2};
@@ -102,6 +118,12 @@ class DataTypes{
         }
         System.out.println(); 
 
+        System.out.printf("\n\t::Pring using int i:arr formated\n");
+        for(String s:arr)
+        {
+            System.out.printf("%s->",s);
+        }
+
         System.out.printf("\n\t::Print Using .forEach\t");
         arr.forEach(element -> System.out.printf("%s->",element));
 
@@ -128,6 +150,11 @@ class DataTypes{
     }
 
 
+    void testMap()
+    {
+
+    }
+
 
     public static void main(String args[])
     {
@@ -141,9 +168,19 @@ class DataTypes{
 
         // object.testArrayList();
 
-        object.arraySorting();
+        // object.arraySorting();
+
+        object.testMap();
 
         System.out.printf("\n");
+
+        /*
+            TO-DO: 
+            (a) Lambda Expression
+            (b) Linked List
+            (c) Map, Set : browser,add, remove etc function
+            (d) Queue, Stack: supported fuctions.
+        */
     }
 
 
