@@ -236,6 +236,8 @@ class DataTypes{
             (b) Linked List
             (c) Map, Set : browser,add, remove etc function
             (d) Queue, Stack: supported fuctions.
+
+            (e) class, inheritacne, dervied class, methode overriding (just implement one design pattern, it will cover all aspects of it.)
         */
     }
 
