@@ -90,10 +90,6 @@ class DataTypes{
 
         Collections.sort(arr4,rComperator1);
 
-
-
-
-
     }
 
     void testArrayList()
@@ -101,6 +97,9 @@ class DataTypes{
         System.out.printf("Testing Collection\n");
 
         ArrayList<String> arr = new ArrayList<String>(); //() calls the default constructor
+
+        // List<String> list = new ArrayList<String>() | new LinkedList<>() ; alternative syntax using parent class List
+        
         arr.add("Hello");
         arr.add("Kumar");
         arr.add(1,"Middle"); //add element at index 1
