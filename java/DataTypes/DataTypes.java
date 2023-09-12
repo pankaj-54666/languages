@@ -271,8 +271,63 @@ class DataTypes{
         };
         PriorityQueue<Person> pq2 = new PriorityQueue<Person>(personComperator);
 
+    }
+
+    void testQueue()
+    {
+        // Queue<Integer> q = new Queue<Integer>(); //ISSUE: Queue is an abstract class
+        //LinkedList, ArrayDeque or PriorityQueue are their concrete implementation.
+
+        ArrayDeque<Integer> q = new ArrayDeque<Integer>();
 
 
+        q.add(20);
+        q.add(5);
+
+        while(!q.isEmpty())
+        {
+            System.out.printf("%d,",q.peek());
+            q.remove();
+        }
+
+        //Methodes Available on queue: .peek, .peekFirst, .peekLast, .poll, .pollFirst, .pollLast, .pop(when using as stack). push(when using as stack), .remove etc
+        //https://docs.oracle.com/javase/8/docs/api/java/util/ArrayDeque.html#method.summary
+
+        // # Alternative Decraration
+        Queue<Integer> q2 = new ArrayDeque<Integer>(); //works because parent class can point to any object of child class
+    }
+
+    void testStack()
+    {
+        Stack<Integer> st = new Stack<Integer>();
+
+        st.push(34);
+        st.push(19);
+
+        while(!st.isEmpty())
+        {
+            System.out.printf("%d,",st.peek());
+            st.pop(); 
+            // st.remove(); //WARNING: does not exist
+        }
+
+        // Others methode on stack: .pop(), .peek(), .push()
+    }
+
+    void testSet()
+    {
+        Set<String> s = new HashSet<String>();
+
+        s.add("Apple");
+        s.add("banana");
+        s.add("hurray");
+
+        
+        System.out.printf("does Apples exist? %b\n",s.contains("Apple"));
+
+        s.remove("hurray");
+
+        System.out.printf("Updated set entry is: " + s);
     }
 
     public static void main(String args[])
@@ -291,7 +346,12 @@ class DataTypes{
 
         // object.testMap();
 
-        object.testPriorityQueue();
+        // object.testPriorityQueue();
+
+        // object.testQueue();
+        // object.testStack();
+
+        object.testSet();
 
         System.out.printf("\n");
 
