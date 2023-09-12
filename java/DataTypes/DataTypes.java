@@ -211,6 +211,69 @@ class DataTypes{
 
     }
 
+/**
+ * GOAL: 
+ * (a) Priority Queue with Integer
+ * (b) Priority Queue with custom Object
+ * (c) Function comperator when the object has more than one attribute to sort upon
+ */
+    void testPriorityQueue()
+    {
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+        //PriorityQueeu<Integer> pq = new PriorityQueue<>(); //auto type inferred
+
+        pq.add(3);
+        pq.add(1);
+        pq.add(-100);
+        pq.add(89);
+
+        System.out.printf("\n\t::Access pq elements in order size(%d)\n",pq.size());
+        while(!pq.isEmpty())
+        {
+            Integer top = pq.peek();
+            pq.remove();
+            //peek + remove  = poll
+
+            System.out.printf("%d,",top);
+        }
+        System.out.println("");
+
+        // # Priority Queue with comperator
+        class Person {
+            String name;
+            int age;
+            int height;
+            int distance;
+
+            public Person(String name, int age, int height, int distance) {
+                this.name = name;
+                this.age = age;
+                this.height = height;
+                this.distance = distance;
+            }
+        }
+
+        Comparator<Person> personComperator = (Person a,Person b)->{
+            // Compare by age in descending order (higher age first)
+            int ageComparison = Integer.compare(b.age, a.age);
+            if (ageComparison != 0) {
+                return ageComparison;
+            }
+
+            // Compare by height in ascending order (lower height first)
+            int heightComparison = Integer.compare(a.height, b.height);
+            if (heightComparison != 0) {
+                return heightComparison;
+            }
+
+            // Compare by distance in descending order (higher distance first)
+            return Integer.compare(b.distance, a.distance);
+        };
+        PriorityQueue<Person> pq2 = new PriorityQueue<Person>(personComperator);
+
+
+
+    }
 
     public static void main(String args[])
     {
@@ -226,9 +289,13 @@ class DataTypes{
 
         // object.arraySorting();
 
-        object.testMap();
+        // object.testMap();
+
+        object.testPriorityQueue();
 
         System.out.printf("\n");
+
+        
 
         /*
             TO-DO: 
