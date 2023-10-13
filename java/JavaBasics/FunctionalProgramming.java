@@ -1,7 +1,8 @@
 package com.functional;
 import java.util.function.Function;
 
-// compile and run as: javac -d . FunctionalProgramming.java && java com/functional/FunctionalProgramming
+// compile and run as: 
+//javac -d . FunctionalProgramming.java && java com/functional/FunctionalProgramming
 
 class FunctionalProgramming{
 
