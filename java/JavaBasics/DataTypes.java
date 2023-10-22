@@ -1,7 +1,7 @@
 package com.datatypes;
 import java.util.*; //collection + other import
 
-
+//javac -d . DataTypes.java && java com.datatypes.DataTypes
 class DataTypes{
     /* aux functuins*/
     void printArray(int arr[])
@@ -488,11 +488,11 @@ class DataTypes{
         // Call the primitiveTypes method on the instance
         // object.primitiveTypes();
 
-        object.testArray();
+        // object.testArray();
 
         // object.testArrayList();
 
-        object.arraySorting();
+        // object.arraySorting();
 
         // object.testMap();
 
