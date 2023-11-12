@@ -13,8 +13,33 @@ class FunctionalProgramming{
 
     public void testLambdaExpressionFromCustomInterface(){
 
-        MyCustomFunction f1 = str -> str + ":end";
+        /* task:override the display using annonymos inner class*/
+        MyCustomFunction f0 = new MyCustomFunction(){
+            public String display(String s){
+                return s + "::end";
+            }
+        };
+
+        System.out.printf("Using anonymos inner class:: %s\n",f0.display("passed-string"));
+
+        /* task: using lambda */
+        MyCustomFunction  f1 = (str)-> { 
+            return str + ":end";
+        };
         System.out.printf("f1: %s\n",f1.display("passed-string"));
+
+        /* task: using shorthand notation (skipping () and return statement in expression)*/
+        MyCustomFunction f2 = str -> str + ":end";
+
+        /* task: methode refernce and lambda*/
+        @FunctionalInterface 
+        interface MyCustomFunctionTwo{
+            void display(String s); 
+        }
+        MyCustomFunctionTwo f3  = System.out::println; //you can refer any static methode as long as their return and params matches with lambda
+        
+
+        f3.display("Now you can use this as normal println methode: "+ 10);
     }
 
 
@@ -32,6 +57,11 @@ class FunctionalProgramming{
         System.out.printf("c1: %s\n",combination1.apply(123));
 
         System.out.printf("c2: %s\n",combination2.apply(123));
+
+    }
+
+
+    void testLambdaExpressionApplication(){
 
     }
 
