@@ -143,13 +143,13 @@ class DataTypes{
         Collections.sort(arr4,Collections.reverseOrder());
         System.out.println("Soritng in revese Order" + arr4);
 
-        // Lambda Comperator
+        // task; Lambda Comperator
         Comparator<Integer> rComperator1 = (a,b) -> b.compareTo(a);
         Comparator<Integer> rComperator2 = (a,b) -> {
             return b.compareTo(a);
        };
 
-        // Function Comperator
+        // task: Function Comperator (via anonymous inner class)
         Comparator<Integer> rComperator3 = new Comparator<Integer>() {
             @Override
             public int compare(Integer a, Integer b) {
@@ -158,7 +158,7 @@ class DataTypes{
         };
 
     //NOTE: in C++ we return true/false, but in java/javascript we return +ve,-ve and 0 value
-    /* Preferred */
+    /* task: Preferred */
     Comparator<Integer> rComperator4 = (a,b) -> {
             if(a<b) return -1;
             if(b>a) return 1;
@@ -167,7 +167,41 @@ class DataTypes{
 
         //TO-DO: add example for class comperator.
 
-        Collections.sort(arr4,rComperator4);
+    //task: class comperator with seperate class
+    class SortByName implements Comparator<Integer>{
+        public int compare(Integer lhs,Integer rhs){
+            return lhs - rhs;
+        }
+    };
+    SortByName rComperator5 = new SortByName();
+
+    //task: class comperator with comparision logic inside data class itself
+    class MyInteger implements Comparable<MyInteger>{
+        Integer x;
+
+        MyInteger(Integer x){
+            this.x = x;
+        }
+
+        public int compareTo(MyInteger rhs){
+            return this.x - rhs.x;
+        }
+
+        @Override
+        public String toString(){
+            return Integer.toString(x);
+        }
+    };
+
+    PriorityQueue<MyInteger> pq = new PriorityQueue<MyInteger>();
+    pq.add(new MyInteger(12));
+    pq.add(new MyInteger(14));
+    pq.add(new MyInteger(11));
+    pq.add(new MyInteger(30));
+    System.out.println("Contents of pq with Comparable : " + pq);
+
+
+     // Collections.sort(arr4,rComperator5);
 
         
 
@@ -492,7 +526,7 @@ class DataTypes{
 
         // object.testArrayList();
 
-        // object.arraySorting();
+        object.arraySorting();
 
         // object.testMap();
 
@@ -503,7 +537,7 @@ class DataTypes{
 
         // object.testSet();
 
-        object.testString();
+        // object.testString();
 
         System.out.printf("\n");
 
