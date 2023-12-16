@@ -19,3 +19,5 @@ test {
     }
 }
 ```
+
+# two options to include test depedency into project
