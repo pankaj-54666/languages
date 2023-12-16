@@ -5,7 +5,7 @@ package junit5.guide;
 
 public class App {
     public String getGreeting() {
-        return "Hello World!";
+        return "Hello World!2";
     }
 
     public static void main(String[] args) {

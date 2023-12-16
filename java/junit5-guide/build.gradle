@@ -8,6 +8,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    // id 'com.adarshr.test-logger' version '4.0.0'
 }
 
 repositories {
@@ -40,4 +41,11 @@ application {
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+test {
+    testLogging.showStandardStreams = true
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
 }
