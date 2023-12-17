@@ -26,6 +26,10 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.10.1'
 */
 
+    //Mockito
+    // https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter
+    testImplementation("org.mockito:mockito-junit-jupiter:5.8.0")
+
 
 
     // This dependency is used by the application.
