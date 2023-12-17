@@ -4,11 +4,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.CsvFileSource;
-import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.*;
 
+import java.util.Arrays;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -82,13 +80,35 @@ class CalculatorTest3 {
         assertEquals(cal.add(a,b),expectedResult);
     }
 
-    /* Example34 @CsvFileSource: provide csv source file */
+    /* Example4: @CsvFileSource: provide csv source file */
     @ParameterizedTest
     @CsvFileSource(resources = "/addition-test.csv")
     void parameterizedTestExample4(int a,int b,int expectedResult){
 
         assertEquals(cal.add(a,b),expectedResult);
     }
+
+    /* Example5: @ValueSource (use for simple testing, and give only 1 stirng args)*/
+    @ParameterizedTest
+    @ValueSource(strings = {"a:bc:edf","df:df:df","adfd:dvdf"})
+    void testStringParsingCorrectness(String str){
+
+        //Act (like: check if string is parsed correctly)
+       String list[] = str.split(":");
+       System.out.println(list);
+
+       assertNotNull(list);
+
+    }
+
+    /* Next things(less useful)
+     - @RepeatedTest
+     - @TestMethodeOrder(MethodeOrder.Random.class | MethodeOrder.MethodeName.class) <= applied on class
+     - @Order(2) on test methode to execute that in that position <= applied on methode or class
+     - skipped class + methode ordering
+
+
+     */
 
 
 
