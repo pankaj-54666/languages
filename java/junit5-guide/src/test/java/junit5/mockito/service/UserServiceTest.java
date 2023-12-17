@@ -45,7 +45,7 @@ public class UserServiceTest {
         email = "test@test.com";
         password = "12345678";
         repeatPassword = "12345678";
-        MockitoAnnotations.openMocks(this);
+//        MockitoAnnotations.openMocks(this); <= required only for Mockito.3x and lower
     }
 
     @DisplayName("User object created")
@@ -63,7 +63,8 @@ public class UserServiceTest {
         assertEquals(lastName, user.getLastName(), "User's last name is incorrect");
         assertEquals(email, user.getEmail(), "User's email is incorrect");
         assertNotNull(user.getId(), "User id is missing");
-        Mockito.verify(usersRepository)
+
+        Mockito.verify(usersRepository) //verify is methode is called exactly once
                 .save(any(User.class));
     }
 
@@ -113,6 +114,7 @@ public class UserServiceTest {
         }, "Should have thrown UserServiceException instead");
     }
 
+    /* Throwing from void methode using doThrow.when stubbing*/
     @Test
     @DisplayName("EmailNotificationException is handled")
     void testCreateUser_whenEmailNotificationExceptionThrown_throwsUserServiceException() {
