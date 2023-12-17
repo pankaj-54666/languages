@@ -55,4 +55,21 @@ class CalculatorTest {
 
     }
 
+    /* assert an exception*/
+    @DisplayName("division by zero should throw arithmetic exception")
+    @Test
+    void testDivideByZero(){
+        //Arrange
+        int dividend = 4;
+        int divisor = 0;
+        Calculator cal = new Calculator();
+
+        //Act&Assert
+        assertThrows(ArithmeticException.class, ()-> {
+
+            //Act
+            cal.divide(dividend,divisor);
+            }, "Divide by zero test");
+    }
+
 }
