@@ -11,4 +11,6 @@ plugins {
 }
 
 rootProject.name = 'junit5-guide'
-include('app')
+include('jupiter')
+include 'controller-tguide'
+
