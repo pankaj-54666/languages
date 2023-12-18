@@ -29,14 +29,12 @@ import static org.mockito.Mockito.when;
 @WebMvcTest(controllers = UsersController.class,
 excludeAutoConfiguration = {SecurityAutoConfiguration.class})
 //@AutoConfigureMockMvc(addFilters = false)
-//@MockBean({UsersServiceImpl.class})
 public class UsersControllerWebLayerTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @MockBean
-    //@Autowired
     UsersService usersService;
 
     private UserDetailsRequestModel userDetailsRequestModel;
@@ -44,10 +42,8 @@ public class UsersControllerWebLayerTest {
     @BeforeEach
     void setup() {
         userDetailsRequestModel = new UserDetailsRequestModel();
-        userDetailsRequestModel.setFirstName("Sergey");
-        userDetailsRequestModel.setLastName("Kargopolov");
-        userDetailsRequestModel.setEmail("test@test.com");
-        userDetailsRequestModel.setPassword("12345678");
+        userDetailsRequestModel.setFirstName("Sergey"); userDetailsRequestModel.setLastName("Kargopolov");
+        userDetailsRequestModel.setEmail("test@test.com");userDetailsRequestModel.setPassword("12345678");
     }
 
     @Test

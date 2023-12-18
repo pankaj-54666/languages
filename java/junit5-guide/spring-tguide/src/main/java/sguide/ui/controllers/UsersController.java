@@ -25,7 +25,8 @@ public class UsersController {
     }
 
     @PostMapping
-    public UserRest createUser(@RequestBody @Valid UserDetailsRequestModel userDetails) throws Exception {
+    public UserRest createUser(@RequestBody @Valid UserDetailsRequestModel userDetails)
+            throws Exception {
         ModelMapper modelMapper = new ModelMapper();
         UserDto userDto = new ModelMapper().map(userDetails, UserDto.class);
 
@@ -45,3 +46,5 @@ public class UsersController {
         return new ModelMapper().map(users, listType);
     }
 }
+
+

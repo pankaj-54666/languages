@@ -17,9 +17,6 @@ import java.util.Arrays;
 import java.util.List;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-//@TestPropertySource(locations = "/application-test.properties",
-//        properties = "server.port=8081")
-//@TestPropertySource(locations = "/application-test.properties")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class UsersControllerIntegrationTest {
@@ -40,13 +37,6 @@ public class UsersControllerIntegrationTest {
     @Order(1)
     void testCreateUser_whenValidDetailsProvided_returnsUserDetails() throws JSONException {
         // Arrange
-//        String createUserJson = "{\n" +
-//                "    \"firstName\":\"Sergey\",\n" +
-//                "    \"lastName\":\"Kargopolov\",\n" +
-//                "    \"email\":\"test3@test.com\",\n" +
-//                "    \"password\":\"12345678\",\n" +
-//                "    \"repeatPassword\":\"12345678\"\n" +
-//                "}";
 
         JSONObject userDetailsRequestJson = new JSONObject();
         userDetailsRequestJson.put("firstName", "Sergey");
@@ -110,10 +100,7 @@ public class UsersControllerIntegrationTest {
     @Order(3)
     void testUserLogin_whenValidCredentialsProvided_returnsJWTinAuthorizationHeader() throws JSONException {
         // Arrange
-//        String loginCredentialsJson = "{\n" +
-//                "    \"email\":\"test3@test.com\",\n" +
-//                "    \"password\":\"12345678\"\n" +
-//                "}";
+
         JSONObject loginCredentials = new JSONObject();
         loginCredentials.put("email","test@test.com");
         loginCredentials.put("password","12345678");
