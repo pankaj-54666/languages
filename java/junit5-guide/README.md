@@ -20,4 +20,10 @@ test {
 }
 ```
 
-# two options to include test depedency into project
+# two options to include test dependency into project
+
+# Converting project to multi-project
+(a) Add setting.gradle in root folder
+(b) add new folder and add /src and build.gradle inside that folder
+(c) add entry of that folder in setting.gradle
+
