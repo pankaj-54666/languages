@@ -1,0 +1,57 @@
+
+System.out.println("Hello")
+
+println "Hello 2"
+
+
+void printSystemTime(){
+    
+    System.out.println("System Date is: "  + new Date());
+
+    System.out.printf("number a =  %d\n",10);
+
+
+}
+
+void testInt(){
+    int a = 12;
+
+    println "\tvariable a is $a "
+    String userName = "sky";
+
+    print("useName: ${userName}")
+}
+
+void closureTest(){
+    printf("\n\n\t::ENTER: closureTest\n")
+
+    //an empty  closure
+    def echotItOne = {};
+    print echotItOne
+    echotItOne();
+
+    //closure accepting an parameter
+    def echoIt = { a,b,c ->
+        println a;
+        println b;
+        println c;
+    
+    };
+    echoIt(1,"hello",0.123);
+
+    //implict closure parameter it
+    def echoItTwo = {print it};
+    echoItTwo("Hello There using implicat parameter")
+
+    //pass closure as parameter
+    def oneArgMethode(closure){
+        return closure()*2;
+    }
+
+    println oneArgMethode
+}
+
+
+printSystemTime()
+testInt()
+closureTest();
