@@ -1,0 +1,57 @@
+//https://docs.gradle.org/current/javadoc/org/gradle/api/Task.html#doLast-groovy.lang.Closure-
+/* tasks*/
+
+
+task hello{
+    logger.info "Enter: hello task"
+
+    description = 'this is task description'
+
+    doFirst {
+        logger.info "do first1"
+    }
+}
+
+hello.description = "task is this description"
+hello.doLast  {
+    "do last1"
+}
+
+/* task chain */
+hello.doLast{
+    println "dolast2"
+}.doLast{
+    println "dolast3"
+}.doLast{
+    println "dolast4"
+}
+
+/* task order using */
+defaultTasks "getGitCodeFromEcode","downloadCode","buildCode","doFinish"
+
+task getGitCodeFromEcode{
+
+}
+
+task downloadCode{
+
+}
+
+task buildCode{
+
+}
+
+task doFinish{
+
+}
+
+
+/* dependsOn*/
+task doFinished1 (dependsOn: 'doSomethingInMiddle'){
+    doLast{
+        logger.info "$name - Done - Ok!"
+    }
+}
+task doFinished2 (dependsOn: ['downloadCode','doSomethingInMiddle']){
+
+}
