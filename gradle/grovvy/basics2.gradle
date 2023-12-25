@@ -30,6 +30,7 @@ hello.doLast{
 defaultTasks "getGitCodeFromEcode","downloadCode","buildCode","doFinish"
 
 task getGitCodeFromEcode{
+    println "ENTER getGitCodeFromEcode"
 
 }
 
@@ -46,6 +47,7 @@ task doFinish{
 }
 
 
+
 /* dependsOn*/
 task doFinished1 (dependsOn: 'doSomethingInMiddle'){
     doLast{
@@ -55,3 +57,8 @@ task doFinished1 (dependsOn: 'doSomethingInMiddle'){
 task doFinished2 (dependsOn: ['downloadCode','doSomethingInMiddle']){
 
 }
+task doFinished3{
+
+}
+
+doFinished3.dependsOn getGitCodeFromEcode,downloadCode

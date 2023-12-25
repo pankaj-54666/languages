@@ -1,21 +1,53 @@
-printf("Hello There")
-logger.info("logger.info logs")
+/* Printing in gradle + closure as functions*/
 
-/* Accesing Gradle Object & its attributes and functions */
-println "\nRunning gradleVersion : ${gradle.getGradleVersion()} , \ngetGradleHomeDir:${gradle.getGradleHomeDir()}," +
-        "\ngradleuserHomeDIr: ${gradle.getGradleUserHomeDir()}"
+System.out.println("Hello")
 
-/* defining new attributes and funcstion on gradleProject object using ext */
-project.ext.sayHello = "Hello"
-println project.ext.sayHello //<= we can dynamically attach anything including closure
-println project.sayHello
+println "Hello 2"
 
-Closure getUserName = {name ->
-    printf("Enter: getUserName\t");
-    return name + " Kumar"
+
+void printSystemTime(){
+
+    System.out.println("System Date is: "  + new Date());
+
+    System.out.printf("number a =  %d\n",10);
+
+
 }
 
-project.ext.getUserName = getUserName;
+void testInt(){
+    int a = 12;
 
-printf project.ext.getUserName("Sky")
+    println "\tvariable a is $a "
+    String userName = "sky";
+
+    print("useName: ${userName}")
+}
+
+void closureTest(){
+    printf("\n\n\t::ENTER: closureTest\n")
+
+    //an empty  closure
+    def echotItOne = {};
+    print echotItOne
+    echotItOne();
+
+    //closure accepting an parameter
+    def echoIt = { a,b,c ->
+        println a;
+        println b;
+        println c;
+
+    };
+    echoIt(1,"hello",0.123);
+
+    //implict closure parameter it
+    def echoItTwo = {print it};
+    echoItTwo("Hello There using implicat parameter")
+}
+
+
+printSystemTime()
+testInt()
+closureTest();
+
 

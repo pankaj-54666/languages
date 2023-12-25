@@ -1,0 +1,17 @@
+/* Accesing Gradle Object & its attributes and functions */
+println "\nRunning gradleVersion : ${gradle.getGradleVersion()} , \ngetGradleHomeDir:${gradle.getGradleHomeDir()}," +
+        "\ngradleuserHomeDIr: ${gradle.getGradleUserHomeDir()}"
+
+/* defining new attributes and funcstion on gradleProject object using ext */
+project.ext.sayHello = "Hello"
+println project.ext.sayHello //<= we can dynamically attach anything including closure
+println project.sayHello
+
+Closure getUserName = {name ->
+    printf("Enter: getUserName\t");
+    return name + " Kumar"
+}
+
+project.ext.getUserName = getUserName;
+
+printf project.ext.getUserName("Sky")
