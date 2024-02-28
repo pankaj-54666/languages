@@ -50,7 +50,9 @@ void streamAPIExample()
                     // .limit(2) .skip(2)
                     .peek(x -> System.out.printf("%d ",x))
                     // .peek(System.out::println)
-                    .collect(Collectors.toList()); 
+                    .collect(Collectors.toList()); 	
+
+	System.out.printf("\n");
 
     System.out.println("\nlist1: " + list1);
 
