@@ -22,16 +22,11 @@ import java.io.IOException;
 //javac -d . FunctionalProgrammingUsingStreamAPI.java && java com/functional/FunctionProgrammingUsingStreamAPI
 class FunctionProgrammingUsingStreamAPI{
 
-
-
-
 /*
 (a) stream intermidate function uses
 (b) stream terminary function uses
 (c) flatMap for converting Stream<List> as Stream only.
 (d) var keyword use for auto-type inference.
-
-
 */
 void streamAPIExample()
 {
@@ -88,7 +83,7 @@ public static void main(String args[])
 {
     System.out.printf("Inside FunctionProgrammingUsingStreamAPI main\n");
 
-    FunctionProgrammingUsingStreamAPI obj  = new FunctionProgrammingUsingStreamAPI();
+    FunctionProgrammingUsingStreamAPI obj  = new FunctionProgrammingUsingStreamAPI(); 
 
     obj.streamAPIExample();
 
