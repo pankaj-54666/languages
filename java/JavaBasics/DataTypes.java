@@ -520,24 +520,24 @@ class DataTypes{
         DataTypes object = new DataTypes();
 
         // Call the primitiveTypes method on the instance
-        // object.primitiveTypes();
+        object.primitiveTypes();
 
-        // object.testArray();
+        object.testArray();
 
-        // object.testArrayList();
+        object.testArrayList();
 
-        object.arraySorting();
+        object.arraySorting(); /* comperator example*/
 
-        // object.testMap();
+        object.testMap();
 
-        // object.testPriorityQueue();
+        object.testPriorityQueue();
 
-        // object.testQueue();
-        // object.testStack();
+        object.testQueue();
+        object.testStack();
 
-        // object.testSet();
+        object.testSet();
 
-        // object.testString();
+        object.testString();
 
         System.out.printf("\n");
 
