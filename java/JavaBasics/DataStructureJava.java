@@ -174,7 +174,12 @@ public class DataStructureJava {
 
     //Methodes:: boolean add(E), boolean remove(E) , contains(E) , isEmpty()
     set1.add(23);
+    set1.add(56);
     System.out.printf("set1.contains: %b\n",set1.contains(23));
+
+    for(Integer x:set1)
+        System.out.printf("%d,",x);
+    System.out.println();
 
     
     /******* #10 Map (HashMap,TreeMap classes implements Map; Map extends Collection) ********/
