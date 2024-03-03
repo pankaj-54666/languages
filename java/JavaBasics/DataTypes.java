@@ -541,7 +541,7 @@ class DataTypes{
 
         System.out.printf("\n");
 
-        
+        /*#1 Array in java */
 
         /*
             TO-DO: 
@@ -551,13 +551,7 @@ class DataTypes{
             (d) Queue, Stack: supported fuctions.
 
             (e) class, inheritacne, dervied class, methode overriding (just implement one design pattern, it will cover all aspects of it.)
-        */
+        */		
     }
-
-
-
-
-
-
 
 }
