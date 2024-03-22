@@ -444,8 +444,21 @@ class DataTypes{
         System.out.printf("Updated set entry is: " + s);
     }
 
-    void testString()
+
+    void testString() 
     {
+        /*IMP: unlike some other languages that implement strings as character
+arrays, Java implements strings as objects of type String*/
+        /* Determining String/Array/Collection size
+            Java String lenght has .length() properties.
+            Java Array hash .length attribute
+            Java Collectio hash .size() property
+            c++ has .length() and .size() on all STL  */
+        
+        /* String is defined in java.lang.String package, recall that java.lang is imported automatically in all java projects*/
+
+
+        // #1 (all string demonstration) String, StringBuffer and char[]
         String s1 = "I am a immutable string, i cannot be edited";
         String s2 = new String("Alternatie and more streamline with java decralartion");
 
@@ -453,22 +466,51 @@ class DataTypes{
 
         //Note on builder: not thread-safe, but fast on single-thread scenerio
         StringBuilder s4 = new StringBuilder("String using string builder"); 
+        char s44[]  = s4.toString().toCharArray();
 
         System.out.println("s1: "+ s1 + "\ns2: " + s2 + "\ns3: " + s3 +"\ns4: "+s4);
 
+
+        /* ## String class*/
+        String s21 = new String("Hello String");
+        String s22 = "Hello" + " Sky"+ " age: " + 89;
+
+        //Methodes::
+            //.length(), char s.charAt(idx), char str[] = s.toCharArray() ,s1 + s2, s1.equals(s2), s1.equalIgnoreCase(s2) , .equals vs ==, .substring(int sidx), s1.concat(s2), .trim() , .toLowerCase(), .toUpperCase()
+            // static String join(",",s1,s2,s3) , .split(regex)
+            // every class hash .toString() methode which will be called when its pbeing printed
+
+            //IMP: s1.equals(s2) compares the contents for string, where s1 == s2 check if they refer to same object in memory or not
+
+        /* #2 StringBuffer / StringBuilder class methodes */
+            //StringBuilder is new and not thread-safe. Hence fast and appropirate for single threaded application.
+            
+        StringBuilder s61 = new StringBuilder();
+        StringBuilder s62 = new StringBuilder(10);
+        StringBuilder s63 = new StringBuilder(s1);
+        StringBuilder s64 = new StringBuilder("abcd"); //StringBuffer(CharSequence chars)
+
+        //Methodes:
+            // .charAt(idx), .setCharAt(idx,ch), .append(char|String|num)
+            // .reverse() .substring(sidx) ,.substring(sidx,eidx), 
+            
+            //.indexOf(String):java uses KMP for optimized substring search (you can check the implementation at https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/lang/StringBuilder.java)
+
+
+
+
+       /* #3 Others points about string **/
+        /*
+            .concat : for immutatble string(return new string)
+            .append : for mutalbe string(modify original string)
+        */
+        
         // s3 = s3 + "additiong"; //NOTE: this style will not work as s3 and "addition" are of different type
         s3.append("addition");
 
         String s5 = "Hello" + "There";
 
         System.out.println("s1: "+ s1 + "\ns2: " + s2 + "\ns3: " + s3 +"\ns4: "+s4 + "\ns5: " +s5);
-
-
-        /*
-            .concat : for immutatble string(return new string)
-            .append : for mutalbe string(modify original string)
-        */
-        
 
         // # Strign Construction ways 
         //https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#constructor.summary
@@ -484,32 +526,6 @@ class DataTypes{
 
         //"Java" != new String("Java") => Reason why
 
-        // # String Methodes
-
-        String s = new String("Test String");
-        s.length();
-        s.charAt(3);
-        s.equals("Test String");
-        s.equalsIgnoreCase("test");
-        s.compareTo("test");
-        s.trim();
-
-        s.substring(1);
-        s.substring(4,5);
-        s.toLowerCase();
-        s.toUpperCase();
-        s.toLowerCase();
-
-        s.trim();
-        s.startsWith("Tes");
-        s.endsWith("ing");
-
-        String regexExpression  = "[a-z]*";
-        s.matches(regexExpression);
-        //other less used at: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#method.summary
-        
-
-
 
     }
     public static void main(String args[])
@@ -520,28 +536,28 @@ class DataTypes{
         DataTypes object = new DataTypes();
 
         // Call the primitiveTypes method on the instance
-        // object.primitiveTypes();
+        object.primitiveTypes();
 
-        // object.testArray();
+        object.testArray();
 
-        // object.testArrayList();
+        object.testArrayList();
 
-        object.arraySorting();
+        object.arraySorting(); /* comperator example*/
 
-        // object.testMap();
+        object.testMap();
 
-        // object.testPriorityQueue();
+        object.testPriorityQueue();
 
-        // object.testQueue();
-        // object.testStack();
+        object.testQueue();
+        object.testStack();
 
-        // object.testSet();
+        object.testSet();
 
-        // object.testString();
+        object.testString();
 
         System.out.printf("\n");
 
-        
+        /*#1 Array in java */
 
         /*
             TO-DO: 
@@ -551,13 +567,7 @@ class DataTypes{
             (d) Queue, Stack: supported fuctions.
 
             (e) class, inheritacne, dervied class, methode overriding (just implement one design pattern, it will cover all aspects of it.)
-        */
+        */		
     }
-
-
-
-
-
-
 
 }
