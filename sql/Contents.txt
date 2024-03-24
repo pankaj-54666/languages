@@ -1,0 +1,50 @@
+
+
+SQL Basics              <- create table, issue query , perform CRUD
+SQL Commands & Syntax   <- check udemy PostgreSQL course notes
+
+Database Desing
+                    Fundamental
+                    07/Effective  Database Design
+                    11/Advance Database Modelling
+
+                    Case Study
+                    12/Database Design1
+                    15/create a Bank Database
+
+                    26/HR Database Design
+                    26/Website Database Design
+                    26/Sports Database Design
+                    22/EAV Design
+                    26/Create a Hierarchy Data
+
+
+Mastering query
+                    Query Basics
+                    4,5,6/Select Mastery1,2,3
+                    13/Subquery
+                    16/Views
+                    18/CTEs
+
+                    Query Example
+                    22/Show a page of Records
+                    23/Sales Report
+                    24/Shipping Records
+                    25/Ollivanders Inverntory
+                    
+                    Query Practice
+                    /exercise
+
+
+Making Query Faster
+                    26/How to read an Explain Plan
+                    20/Write Faster SQL
+
+Bonus               
+                    /bonus
+                    sql_interview-questions.pdf
+                    cheatsheet
+                    database normalization checklist
+                    database normalization Example
+                    joins.pdf
+

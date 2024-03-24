@@ -1,0 +1,28 @@
+#1 Installation & Start the psql
+
+Install Postgresql on linux.
+
+sudo service postgresql start
+sudo systemctl status postgresql
+sudo -u postgres psql |  postgres psql -U postgres
+
+
+
+#2 List of Important commands (issue them on postgres=# prompt)
+\du	: list users
+\list	: list database
+
+\!cls
+
+CREATE DATABASE testdb; 	:: create database, NOTE semicomma is must and denote the end of sql statement.
+\c testdb
+
+#3 command to issue ton dbname=# prompt
+All standard SQL commands
+
+
+
+_________________________________________________________________________
+res1:   https://www.youtube.com/watch?v=GiT0Dm8l_Ts
+res1.1: https://www.youtube.com/watch?v=RySuQtMiBxQ&t=248s
+res2:   https://www.postgresql.org/docs/current/app-psql.html#:~:text=psql%20is%20a%20terminal%2Dbased,and%20see%20the%20query%20results.
