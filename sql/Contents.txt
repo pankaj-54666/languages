@@ -4,7 +4,7 @@ SQL Basics              <- create table, issue query , perform CRUD
 SQL Commands & Syntax   <- check udemy PostgreSQL course notes
 
 Database Desing
-                    Fundamental
+                    Fundamental <- database desing and how to map many-to-many and one-to-many and relationship table
                     07/Effective  Database Design
                     11/Advance Database Modelling
 
@@ -17,6 +17,19 @@ Database Desing
                     26/Sports Database Design
                     22/EAV Design
                     26/Create a Hierarchy Data
+
+                    ERD Design(more) (https://www.databasestar.com/sample-data-sql/)
+                    Movies ERD
+                    Video Games ERD
+                    Olympic Games ERD
+                    Superheroes ERD
+                    University Rankings ERD
+                    Gravity Bookstore ERD
+
+                    More ERD (https://www.youtube.com/@DatabaseStar)
+                    Train
+                    ...
+
 
 
 Mastering query
