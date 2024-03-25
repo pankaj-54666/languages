@@ -52,7 +52,7 @@ Subquery Examples & Usages:
 __________________________________________________________________________________
 ANSWERS
 ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
-=> ERD: /res/library-erd.png
+=> ERD: /res/erd-gravity.png
 => books having page count greator than average page count
 SELECT 
     book_id,title,isbn13,language_id,num_pages,publication_date,publisher_id
