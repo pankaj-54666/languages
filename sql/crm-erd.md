@@ -20,6 +20,10 @@ Write query for each of the following requirements:
 (d) Generate report that show the top5 companies that have orderes from us. Columns(company_name,number_of_order,total_order_value(USD),total_order_value(INR),average_order_value)
     Hint: select company by order value -> group by companies -> use operator to show INR total_order_value column -> use currenty_exchange_table/lookup table -> select top 5 -> simplify query with subquery
 
+(e) Show use of HAVING clause
+    use to filter on columns with aggregate functions.
+    ex: HAVING count(*) >1
+
 
 
 __________________________________________________________________________________
