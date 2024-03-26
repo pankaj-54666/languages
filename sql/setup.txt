@@ -1,5 +1,10 @@
-#1 Installation & Start the psql
+Use to draw text based diagram:              https://textik.com/
+Use pgsql for cli based query & testing:     use psql: https://www.postgresql.org/docs/current/app-psql.html#:~:text=psql%20is%20a%20terminal%2Dbased,and%20see%20the%20query%20results.
 
+
+__________________________________________________________________________________
+Installation & Start the psql
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 Install Postgresql on linux.
 
 sudo service postgresql start

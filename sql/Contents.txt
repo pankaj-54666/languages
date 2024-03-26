@@ -2,8 +2,15 @@
 
 SQL Basics              <- create table, issue query , perform CRUD
 SQL Commands & Syntax   <- check udemy PostgreSQL course notes
+                    sql-basics-syntax.md
+                    postgresql-syntax.md
 
-Mastering query
+Mastering Query
+                    mastering-select.md
+                    views.md
+                    subquery.md
+                    CTE.md
+
                     Query Basics
                     4,5,6/Select Mastery1,2,3
                     13/Subquery
@@ -43,7 +50,11 @@ Database Desing
                     Gravity Bookstore ERD
 
                     More ERD (https://www.youtube.com/@DatabaseStar)
+                    (https://www.youtube.com/playlist?list=PLZDOU071E4v6epq3GS0IqZicZc3xwwBN_)
                     Train
+                    ecommerce database desing: https://www.youtube.com/watch?v=8bkGKwb29L4
+                    database for chat application: https://www.youtube.com/watch?v=xL_tYrEcP9M
+                    School, Kanban App,Stackoverflow,Delivery APP,Instagram,Facebook,
                     ...
 
 
@@ -63,4 +74,10 @@ More Contents
                     https://www.databasestar.com/database-design/
                     my-sql syntax + use of each clause + join + etc: https://www.databasestar.com/mysql-database/
                     postgresql syntax: https://www.databasestar.com/postgresql/
+
+                    databasestart
+                    why use WHERE 1=1 in sql query: https://www.youtube.com/watch?v=RjEEEUHvaD4
+
+                    sql-syntax: https://www.databasestar.com/mysql-database/
+                    postgresql-syntax: https://www.databasestar.com/postgresql/#Learning_the_Basics
 
