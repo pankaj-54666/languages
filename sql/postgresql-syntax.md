@@ -2,12 +2,13 @@
 Table Manipulation: CREATE TABLE,ALTER TABLE,DROP TABLE,TRUNCATE TABLE
 Data manipulation statement: SELECT,INSERT,UPDATE,DELETE
 Clauses:    WHERE,ORDER BY,GROUP BY,HAVING,DISTINCT
-Operators: math operator, LIKE,ILIKE,||,
+Operators: math operator, LIKE,ILIKE,||, (https://www.databasestar.com/sql-operators/)
 SET operators:
 Case Statements: 
 */
 
 # Table Manipulation
+```sql
 /* Create Table with implicity column constrain*/
 CREATE TABLE website_user(
     id SERIAL NOT NULL PRIMARY KEY,
@@ -81,7 +82,7 @@ INSERT INTO workout_plan(name) VALUES('sample name');
 INSERT INTO website_user (age, first_name, details, user_weight, user_ratio, dob, last_login, is_admin, json_user_details, gamer_level, gender, user_status, workout_plan_id, unique_column, not_null_column, check_column)
 VALUES
     (30, 'John', 'Some details about John', 75.5, 1.8, '1992-05-15', '2024-03-25 10:00:00', false, '{"key": "value"}', 'beginner', 'M', 'active', 1, 'unique_value', 'not_null_value', 5);
-
+```
 
 
 __________________________________________________________________________________
