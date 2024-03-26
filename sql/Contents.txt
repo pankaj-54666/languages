@@ -59,3 +59,8 @@ Bonus
                     database normalization Example
                     joins.pdf
 
+More Contents
+                    https://www.databasestar.com/database-design/
+                    my-sql syntax + use of each clause + join + etc: https://www.databasestar.com/mysql-database/
+                    postgresql syntax: https://www.databasestar.com/postgresql/
+
