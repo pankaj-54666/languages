@@ -1,0 +1,3 @@
+
+(a) package name cannot contains java keyword
+use javas for javasnippet for your package name.
