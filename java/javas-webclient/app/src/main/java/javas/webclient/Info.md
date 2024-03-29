@@ -44,3 +44,6 @@ TODO: check if onStatus is only used to map statusCode to Mono<Exception> or for
 () TODO:  .onErrorResume for converting mono erros to Entity or some fixed type Exception (https://www.javaguides.net/2023/11/spring-boot-webclient-tutorial.html)
 () .toEntity :: to convert to responseEntity! (https://howtodoinjava.com/spring-webflux/webclient-get-post-example/)
 (https://reflectoring.io/spring-webclient/)
+
+() Testign with WebClintTEST WITh specific error code return and code behaviour
+() with parameters (https://www.baeldung.com/webflux-webclient-parameters)
