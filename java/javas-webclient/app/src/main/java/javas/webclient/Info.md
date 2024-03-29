@@ -40,3 +40,7 @@ ex: when error responseEntity need to be caset to ErrorResponseVo else to Respon
 
 (h) .onStatus with .retrival
 TODO: check if onStatus is only used to map statusCode to Mono<Exception> or for some other purpose also?
+
+() TODO:  .onErrorResume for converting mono erros to Entity or some fixed type Exception (https://www.javaguides.net/2023/11/spring-boot-webclient-tutorial.html)
+() .toEntity :: to convert to responseEntity! (https://howtodoinjava.com/spring-webflux/webclient-get-post-example/)
+(https://reflectoring.io/spring-webclient/)
