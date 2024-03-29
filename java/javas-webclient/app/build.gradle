@@ -8,6 +8,10 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    id "io.freefair.lombok" version "8.6" //DOCS: lomboksetup https://plugins.gradle.org/plugin/io.freefair.lombok
+}
+ext {
+    jacksonVersion = '2.17.0'
 }
 
 repositories {
@@ -28,14 +32,18 @@ dependencies {
     // https://mvnrepository.com/artifact/org.springframework/spring-context
     implementation 'org.springframework:spring-context:6.1.5'
 
-    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api
+    //https://logging.apache.org/log4j/2.x/maven-artifacts.html :: how to include log4j logging to your gradle
     implementation 'org.apache.logging.log4j:log4j-api:2.23.1'
-
-    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
     implementation 'org.apache.logging.log4j:log4j-core:2.23.1'
-    implementation 'org.projectlombok:lombok:1.18.22'
 
-}
+    //gson :: to convert to json (way1)
+    implementation 'com.google.code.gson:gson:2.8.7'
+
+    //jackson :: to convert to json(way2) :: implemented by most of the depedency
+//    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: jacksonVersion
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: jacksonVersion
+//    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: jacksonVersion
+    }
 
 // Apply a specific Java toolchain to ease working on different environments.
 java {
