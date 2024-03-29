@@ -1,4 +1,4 @@
-package java.webclient;
+package javas.webclient;
 
 
 import lombok.extern.slf4j.Slf4j;

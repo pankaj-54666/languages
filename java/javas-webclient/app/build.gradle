@@ -46,7 +46,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'java.webclient.App'
+    mainClass = 'javas.webclient.App'
 }
 
 tasks.named('test') {
