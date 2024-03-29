@@ -6,6 +6,8 @@ import javas.webclient.exchange.ProductRequestVo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.client.ClientRequest;
 import org.springframework.web.reactive.function.client.ExchangeFilterFunction;
@@ -153,6 +155,55 @@ public class WebClientDemo {
 
     }
 
+    public void exchangeDemo()
+    {
+        String url = "https://dummyjson.com/carts";
+
+        WebClient client = WebClient.builder()
+                .baseUrl(url)
+                .build();
+
+        String sres = client.get()
+                .exchangeToMono((clientResponse -> {
+                    /* take decision based on httpStatusCode, headers and customBodyValues*/
+                    /* exchange is used to have more control over the response when compared to .retrival option. */
+                    if(clientResponse.statusCode().equals(HttpStatus.OK))
+                        return clientResponse.bodyToMono(String.class);
+
+                    if(clientResponse.statusCode().equals(HttpStatus.BAD_REQUEST))
+                        return Mono.error(new RuntimeException("Bad Response"));
+                    else
+                        return clientResponse.createError();
+
+                }))
+                .block();
+
+        logger.info("sres: {}",sres.substring(0,30));
+
+    }
+
+    public void onStatusDemo()
+    {
+
+        String url = "https://dummyjson.com/carts";
+
+        WebClient client = WebClient.builder()
+                .baseUrl(url)
+                .build();
+
+        String sres = client.get()
+                .retrieve()
+                .onStatus(httpStatusCode -> true,clientResponse -> { //TODO: check if onStatus can be only used for error checking OR we can return modified clientresoonse also?
+                    return Mono.error(new RuntimeException("Status is not okay!"));
+                })
+                .bodyToMono(String.class)
+                .block();
+
+        logger.info("sres: {}",sres.substring(0,30));
+
+
+    }
+
     public void test()
     {
         try {
@@ -161,7 +212,10 @@ public class WebClientDemo {
 //            getSync();
 //            postSync();
 
-            filterDemo();
+//            filterDemo();
+
+//            exchangeDemo();
+            onStatusDemo();
         }catch (Exception e){
             logger.info("Error: ",e);
         }

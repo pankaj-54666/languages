@@ -35,3 +35,8 @@
 `https://dummyjson.com/docs`
 
 (f) WebClient .filter chaining for request and response `https://docs.spring.io/spring-framework/reference/web/webflux-webclient/client-filter.html`
+(g) .retrival vs .exchange (exchange has header and httpStatus decision available, we can take decisiion based on that, and also convert responseBody to different entity based on appropriate status code)
+ex: when error responseEntity need to be caset to ErrorResponseVo else to ResponseVo
+
+(h) .onStatus with .retrival
+TODO: check if onStatus is only used to map statusCode to Mono<Exception> or for some other purpose also?
