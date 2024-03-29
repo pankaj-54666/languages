@@ -30,3 +30,8 @@
 (b) How to include log4j in the project: https://logging.apache.org/log4j/2.x/
 (c) Include jackson / gson in build.gradle
 (d) How to include lombok to project(use plugin version) `https://projectlombok.org/setup/gradle`
+(e) GitHub dummy GET,POST apis
+`https://github.com/Ovi/DummyJSON`
+`https://dummyjson.com/docs`
+
+(f) WebClient .filter chaining for request and response `https://docs.spring.io/spring-framework/reference/web/webflux-webclient/client-filter.html`
