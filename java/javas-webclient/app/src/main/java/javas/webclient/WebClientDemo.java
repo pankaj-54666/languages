@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.client.ClientRequest;
+import org.springframework.web.reactive.function.client.ClientResponse;
 import org.springframework.web.reactive.function.client.ExchangeFilterFunction;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
@@ -195,6 +196,7 @@ public class WebClientDemo {
                 .retrieve()
                 .onStatus(httpStatusCode -> true,clientResponse -> { //TODO: check if onStatus can be only used for error checking OR we can return modified clientresoonse also?
                     return Mono.error(new RuntimeException("Status is not okay!"));
+                    //You can return your custom exception mapping also for different type of statusCode
                 })
                 .bodyToMono(String.class)
                 .block();

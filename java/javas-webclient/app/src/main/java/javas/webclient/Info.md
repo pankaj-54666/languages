@@ -35,6 +35,10 @@
 `https://dummyjson.com/docs`
 
 (f) WebClient .filter chaining for request and response `https://docs.spring.io/spring-framework/reference/web/webflux-webclient/client-filter.html`
+    - ClientResponse methodes: `https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/reactive/function/client/ClientResponse.html`
+    - ClientRequest methodes: `https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/reactive/function/client/ClientRequest.html`
+
+
 (g) .retrival vs .exchange (exchange has header and httpStatus decision available, we can take decisiion based on that, and also convert responseBody to different entity based on appropriate status code)
 ex: when error responseEntity need to be caset to ErrorResponseVo else to ResponseVo
 
@@ -45,5 +49,8 @@ TODO: check if onStatus is only used to map statusCode to Mono<Exception> or for
 () .toEntity :: to convert to responseEntity! (https://howtodoinjava.com/spring-webflux/webclient-get-post-example/)
 (https://reflectoring.io/spring-webclient/)
 
-() Testign with WebClintTEST WITh specific error code return and code behaviour
+() Testing application end-points(ex: Controller implemented via sping-boot) with WebClintTest With specific error code return and code behaviour
 () with parameters (https://www.baeldung.com/webflux-webclient-parameters)
+
+() Important: spring-webfulx and spring-mvc are two ways to build application and do rest calls.
+spring-webflux is latest and supports non-blocking call. And hence, single thread can process multiple request contrast to SpringMVC where each request is managed by single thread resulting in large memory requirement.
