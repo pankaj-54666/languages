@@ -1,0 +1,5 @@
+=> TODO: get from office notes
+
+
+L57: *ngFor directive : to repeate code
+    String interpolation {{title}}
