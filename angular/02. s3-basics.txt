@@ -1,0 +1,11 @@
+=> TODO: get from office notes
+
+
+L57: *ngFor directive : to repeate code
+    String interpolation {{title}}
+
+# app.module.ts
+    all components must be registered here.
+    all imports must be registered here.
+    bootstarp component(the first component to load) must be reistered here
+    
