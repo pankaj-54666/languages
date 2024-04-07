@@ -1,0 +1,11 @@
+All diagranms are in diagrams.drawio
+If any diagram.png has less visibliliy, you can open diagramgs.drawio and export the same diagram as .svg
+
+Then open it in Browser for clear view.
+
+#2 Other better option is to Select File->Export->Advance -> 400dpi(it will change zoom level to 400 which is okay) -> export to png!
+
+
+#Pending
+Directive in depth
+Routing
