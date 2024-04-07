@@ -10,3 +10,4 @@ Then open it in Browser for clear view.
 Directive in depth
 Routing
 s15-Forms
+s18-http reqeust
