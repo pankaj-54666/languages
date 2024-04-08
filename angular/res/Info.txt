@@ -7,10 +7,30 @@ Then open it in Browser for clear view.
 
 
 #Pending
-Directive in depth
-Routing
-s15-Forms
-s18-http reqeust
+s2-Basics -> done
+s4-debugging -> pending
+s5-databinding-> done
+s7-Directive in depth->done?
+s9-service injectino->done
+s11-routing->pending
+s13-observables->done
+
+s15-Forms->pending
+s17-pipes->done
+s18-http reqeust -> done
+s20-auth -> done
+s21-dynamic component
+
+s22-optimization and modules->pending(last)
+s23-deployment->pending
+s25-signals->done
+s26-> state management using NgRx(last)
+
+s29->service workers -> skipped
+s30-unit testing->skipped
+s31->CLI
+
+s34-typescript-> pending(last)
 
 throw Error -> RxJx will throw a error wrapped in observable (RxJx always return a observable)
 
