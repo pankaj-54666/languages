@@ -11,3 +11,8 @@ Directive in depth
 Routing
 s15-Forms
 s18-http reqeust
+
+throw Error -> RxJx will throw a error wrapped in observable (RxJx always return a observable)
+
+subject vs Behaviout subject
+take(1) is added so that value is read only guard is activated and not always when the value changes.
