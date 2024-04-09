@@ -36,3 +36,9 @@ throw Error -> RxJx will throw a error wrapped in observable (RxJx always return
 
 subject vs Behaviout subject
 take(1) is added so that value is read only guard is activated and not always when the value changes.
+
+
+---routing---
+## setting route
+adding routes to routesObject then export from route file
+then include in your project + add router-outlet
