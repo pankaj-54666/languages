@@ -19,5 +19,4 @@ export class ErrorPageComponent implements OnInit {
       }
     );
   }
-
 }

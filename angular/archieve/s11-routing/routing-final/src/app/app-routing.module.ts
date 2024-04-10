@@ -31,14 +31,10 @@ const appRoutes: Routes = [
   { path: 'not-found', component: ErrorPageComponent, data: {message: 'Page not found!'} },
   { path: '**', redirectTo: '/not-found' }
 ];
-
 @NgModule({
   imports: [
     // RouterModule.forRoot(appRoutes, {useHash: true})
     RouterModule.forRoot(appRoutes)
   ],
   exports: [RouterModule]
-})
-export class AppRoutingModule {
-
-}
+}) export class AppRoutingModule {}
