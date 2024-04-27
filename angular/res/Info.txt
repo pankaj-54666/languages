@@ -10,7 +10,7 @@ Then open it in Browser for clear view.
 s2-Basics -> done
 s4-debugging -> pending
 s5-databinding-> done
-s7-Directive in depth->done?
+s7-Directive in depth->started
 s9-service injectino->done
 s11-routing->done
 s13-observables->done
