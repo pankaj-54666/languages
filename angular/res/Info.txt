@@ -12,10 +12,10 @@ s4-debugging -> pending
 s5-databinding-> done
 s7-Directive in depth->done?
 s9-service injectino->done
-s11-routing->pending
+s11-routing->done
 s13-observables->done
 
-s15-Forms->pending
+s15-Forms->pending Template Driven vs Reactive (via code): done
 s17-pipes->done
 s18-http reqeust -> done
 s20-auth -> done
