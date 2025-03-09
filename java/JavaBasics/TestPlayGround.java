@@ -119,6 +119,57 @@ public class TestPlayGround{
         t2.start();        
     } 
 
+    private static void testCollection(){
+
+        Queue<Integer> q1 = new LinkedList<>();
+        q1.offer(12);
+        q1.offer(10);
+
+        System.out.printf("%d\n",q1.peek());
+
+        Queue<Integer> q2 = new ArrayDeque<>();
+        q2.offer(13);
+        q2.peek();
+        q2.poll();
+        q2.size();
+
+        //stack
+         Stack<Integer> st1 = new Stack<>();
+         st1.push(29);
+         st1.push(24);
+         System.out.printf("st1.pop() = %d\n",st1.pop());
+
+    }
+
+    public static void testComperator(){
+
+        Integer arr[] = {1,4,5,6,2,7,8,4,6,7};
+        Arrays.sort(arr);
+
+        Comparator<Integer> cmp1 = (lhs,rhs) ->  Integer.compare(rhs,lhs);
+        // Comparator<Integer> cmp2 = (lhs,rhs) ->  lhs < rhs; //-> will not work as java need -1,0,1 return
+        Comparator<Integer> cmp3 = (lhs,rhs) -> -(lhs-rhs);
+        Arrays.sort(arr,cmp3);
+
+        for(int i=0;i<arr.length;i++){
+            System.out.printf("%d ",arr[i]);
+        }
+        System.out.printf("");
+
+        PriorityQueue<Integer> pq1 = new PriorityQueue<>();
+        PriorityQueue<Integer> pq2 = new PriorityQueue<>(cmp1);
+
+        pq1.offer(12);
+        pq1.offer(4);
+
+
+        Comparator<String> scmp1 = (lhs,rhs) -> lhs.compareTo(rhs);
+        Map<String,Integer> map1 = new HashMap<String,Integer>();
+        // Map<String,Integer> map2 = new HashMap<String,Integer>(scmp1); //HashMap does not support key orderig(as its unordered map)
+        Map<String,Integer> map3 = new TreeMap<String,Integer>(scmp1);
+
+    }
+
     public static void main(String[] args) throws InterruptedException{
         System.out.printf("ENTER: main\n");
 
@@ -126,7 +177,10 @@ public class TestPlayGround{
 
         // handleUserCancelInterrupt();
 
-        testCritialSection();
+        //testCritialSection();
+
+        //testCollection();
+        testComperator();
 
      
         
