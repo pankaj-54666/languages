@@ -25,11 +25,11 @@ public class LearnThread{
 
         //Task1: Thread using extends
         ThreadTestOne obj1 = new ThreadTestOne();
-        obj1.run();
+        obj1.start();
 
 
         //Task2: Thread using implement 
-        ThreadTestTwo obj2 = new ThreadTestTwo();
+        Thread obj2 = new Thread(new ThreadTestTwo());
         obj2.run();
 
         //Task3L Thread Methodes
